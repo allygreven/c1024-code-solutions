@@ -13,10 +13,16 @@ function isUnderFive(number: number): boolean {
 }
 console.log('isUnderFive: ', isUnderFive(3));
 /// /////////////////////////////////////////
+
 function isEven(number: number): boolean {
-  return number >= 2 + 2;
+  if (number % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
-console.log('isEven: ', isEven(6));
+console.log('isEven: ', isEven(5));
+
 /// //////////////////////////////////////
 function startsWithJ(string: string): boolean {
   return string[0] === 'J';
@@ -67,11 +73,11 @@ console.log(
 /// //////////////////////////////////////////////////
 
 function categorizeAcidity(pH: number): string {
-  if (pH < 7) {
+  if (pH > 0 && pH < 7) {
     return 'acid';
   } else if (pH === 7) {
     return 'neutral';
-  } else if (pH > 7 && pH < 14) {
+  } else if (pH > 7 && pH <= 14) {
     return 'base';
   } else {
     return 'invalid pH level';
