@@ -1,4 +1,5 @@
 'use strict';
-function getPropertyValue(key, object) {
-  return object.key;
+/* exported getPropertyValue */
+function getPropertyValue(object, key) {
+  return object[key];
 }
