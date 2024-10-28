@@ -1,12 +1,16 @@
 'use strict';
 /* exported isUpperCased */
 // function isUpperCased(word: string): boolean {
-// if word === word.toUpperCase() {
+//   const newString = '';
+//   for (const char of newString.toUpperCase()) {
+//     return true;
+//   }
+// }
+//   if word[0] === word[0].toUpperCase {
 // return true;
 // }
 // else {
 //   return false;
 // }
 // }
-
-// for of loop
+// use normal for loop??

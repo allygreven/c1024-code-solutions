@@ -1,13 +1,10 @@
 /* exported reverseWord */
-// function reverseWord(word: string): string {
-//   const reverseWord = '';
-//   for (let i = 0; i < word.length; i++) {
-//     return word[i];
-//   }
-// }
+function reverseWord(word: string): string {
+  let reversed = '';
+  for (const char of word) {
+    reversed += char;
+  }
+  return reversed;
+}
 
-// function logEachCharacter(str) {
-//   for (let i = 0; i < str.length; i++) {
-//     console.log(str[i]);
-//   }
-// }
+// use normal for loop
