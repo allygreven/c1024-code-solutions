@@ -1,23 +1,18 @@
 /* exported isVowel */
 
-// function isVowel(char: string): boolean {
-// for (const i = 0; )
-//   if char = 'a' {
-//   return true;
-// }
-// else if char = 'e' {
-//   return true;
-// }
-// else if char = 'i' {
-// return true;
-// }
-// else if char = 'o' {
-//   return true;
-// }
-// else if char = 'u' {
-//   return true;
-// }
-// else {
-//   return false;
-// }
-// }
+function isVowel(char: string): boolean {
+  const newChar = char.toLowerCase();
+  if (newChar === 'a') {
+    return true;
+  } else if (newChar === 'e') {
+    return true;
+  } else if (newChar === 'i') {
+    return true;
+  } else if (newChar === 'o') {
+    return true;
+  } else if (newChar === 'u') {
+    return true;
+  } else {
+    return false;
+  }
+}

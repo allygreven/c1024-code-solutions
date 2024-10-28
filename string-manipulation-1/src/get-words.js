@@ -1,5 +1,8 @@
 'use strict';
 /* exported getWords */
 function getWords(string) {
-  return string.split(string);
+  if (string === '') {
+    return [];
+  }
+  return string.split(' ');
 }
