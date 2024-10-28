@@ -1,10 +1,12 @@
 'use strict';
 /* exported isUpperCased */
 // function isUpperCased(word: string): boolean {
-// if word[0] === word[0].toUpperCase {
+// if word === word.toUpperCase() {
 // return true;
 // }
 // else {
 //   return false;
 // }
 // }
+
+// for of loop
