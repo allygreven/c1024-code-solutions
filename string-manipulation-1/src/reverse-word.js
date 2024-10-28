@@ -2,9 +2,8 @@
 /* exported reverseWord */
 function reverseWord(word) {
   let reversed = '';
-  for (const char of word) {
-    reversed += char;
+  for (let i = 0; i >= word.length - 1; i--) {
+    reversed += word[i];
   }
   return reversed;
 }
-// use normal for loop
