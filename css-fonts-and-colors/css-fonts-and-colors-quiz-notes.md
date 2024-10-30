@@ -5,10 +5,13 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - Name two types of units that can be used to adjust `font-size` in CSS.
+  relative units and absolute units
 
 - What CSS property controls the font used for the text inside an element?
+  font-family
 
 - Name three different types of values you can use to specify colors in CSS.
+  Hexadecimal Values, RGB Values, HSL Values
 
 ## Notes
 
