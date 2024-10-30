@@ -1,8 +1,10 @@
 'use strict';
 /* exported includesSeven */
-// function includesSeven(array: number): boolean {
-//   theArray = [];
-//   for (let i = 0, i === 7; i++) {
-//     return true;
-//   }
-// }
+function includesSeven(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 7) {
+      return true;
+    }
+  }
+  return false;
+}
