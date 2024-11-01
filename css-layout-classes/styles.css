@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  font-family: sans-serif;
+  width: 900px;
+}
+
+.row {
+  display: flex;
+}
+
+.column-third {
+  width: 33.3%;
+}
+
+.column-fourth {
+  width: 25%;
+}
+
+.column-two-thirds {
+  width: 66.6%;
+}
+
+img {
+  width: 100%;
+}
