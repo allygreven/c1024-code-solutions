@@ -116,7 +116,7 @@ h1 {
 }
 
 .column-full h2 {
-  font-family: 'Tiempos Headline';
+  font-family: 'Tiempos Headline', serif;
   font-style: normal;
   text-align: center;
   position: relative;
@@ -171,7 +171,7 @@ h1 {
 }
 
 .learn-more h2 {
-  font-family: 'Tiempos Headline';
+  font-family: 'Tiempos Headline', serif;
   font-style: normal;
   color: #6e6e6e;
   margin-left: 90px;
