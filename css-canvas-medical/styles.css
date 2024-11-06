@@ -50,14 +50,6 @@ ul {
   position: relative;
 }
 
-/* .overlay {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  position: absolute;
-  width: 1100px;
-  height: 550px;
-  bottom: 40px;
-} */
-
 h1 {
   font-family: 'Tiempos Headline', serif;
   font-style: normal;
@@ -80,15 +72,6 @@ h1 {
   width: 50%;
 }
 
-.home-page {
-  background-image: url('./images/hero.jpg');
-  background-size: cover;
-  filter: contrast(50%);
-  position: relative;
-  width: 1100px;
-  height: 550px;
-}
-
 .get-started-button {
   color: white;
   font-size: 20px;
@@ -105,7 +88,16 @@ h1 {
   left: 75px;
 }
 
-/* NVKJDNFNKJSJKSD */
+
+.home-page {
+  background-image: url('./images/hero.jpg');
+  background-size: cover;
+  filter: contrast(50%);
+  position: relative;
+  width: 1100px;
+  height: 550px;
+}
+
 
 .column-full .prefer {
   background-color: #fafafa;
@@ -137,34 +129,19 @@ h1 {
 
 .column-half .cities {
   background-color: #fafafa;
-  width: 1130px;
-  height: 200px;
-  display: flex;
-}
-
-/* .cities .left {
+  display: flexbox;
   font-family: Avenir, sans-serif;
   font-style: normal;
   color: #6e6e6e;
   text-align: center;
-  margin-right: 500px;
-  width: 50%;
-  display: inline-block;
 }
 
-.cities .right {
-  font-family: Avenir, sans-serif;
-  font-style: normal;
-  color: #6e6e6e;
-  text-align: center;
-  width: 50%;
-  margin-top: 30px;
-  display: inline-block;
-} */
 
-/* .column-half .get-started-button {
-  float: right;
-} */
+.learn-more .get-started-button {
+position: relative;
+left: 800px;
+top: 10px;
+}
 
 .column-half {
   flex-basis: 50%;
@@ -232,4 +209,13 @@ h1 {
   height: 100px;
   display: flex;
   gap: 20px;
+}
+
+
+
+
+
+
+
+
 }
