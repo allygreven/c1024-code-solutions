@@ -55,10 +55,10 @@ h1 {
   font-style: normal;
   font-size: 37px;
   position: absolute;
-  top: 65px;
-  left: 80px;
-  width: 50%;
+  top: 150px;
+  left: 150px;
   color: white;
+  width: 500px;
 }
 
 .home-page p {
@@ -67,9 +67,9 @@ h1 {
   font-size: 17px;
   color: white;
   position: absolute;
-  top: 200px;
-  left: 80px;
-  width: 50%;
+  top: 290px;
+  left: 150px;
+  width: 550px;
 }
 
 .get-started-button {
@@ -84,12 +84,11 @@ h1 {
   padding-bottom: 15px;
   position: relative;
   border: 0;
-  top: 435px;
-  left: 75px;
+  bottom: 120px;
+  left: 80px;
 }
 
-
-.home-page {
+.home-page-image {
   background-image: url('./images/hero.jpg');
   background-size: cover;
   filter: contrast(50%);
@@ -97,7 +96,6 @@ h1 {
   width: 1100px;
   height: 550px;
 }
-
 
 .column-full .prefer {
   background-color: #fafafa;
@@ -136,11 +134,10 @@ h1 {
   text-align: center;
 }
 
-
 .learn-more .get-started-button {
-position: relative;
-left: 800px;
-top: 10px;
+  position: relative;
+  left: 800px;
+  bottom: 90px;
 }
 
 .column-half {
@@ -209,13 +206,4 @@ top: 10px;
   height: 100px;
   display: flex;
   gap: 20px;
-}
-
-
-
-
-
-
-
-
 }
