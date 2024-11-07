@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  flex-basis: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+}
+
+span.correct {
+  color: greenyellow;
+}
+
+span.incorrect {
+  color: red;
+}
