@@ -1,9 +1,3 @@
-interface FormElements extends HTMLFormControlsCollection {
-  name: HTMLInputElement;
-  email: HTMLInputElement;
-  message: HTMLTextAreaElement;
-}
-
 function handleFocus(event: Event): void {
   console.log('focus event was fired');
   const eventTarget = event.target as HTMLInputElement | HTMLTextAreaElement;
@@ -42,18 +36,3 @@ $userEmail.addEventListener('input', handleInput);
 $userMessage.addEventListener('focus', handleFocus);
 $userMessage.addEventListener('blur', handleBlur);
 $userMessage.addEventListener('input', handleInput);
-
-const $contactForm = document.querySelector('#contact-form') as HTMLFormElement;
-if (!$contactForm) throw new Error('$contactForm does not exist');
-
-$contactForm.addEventListener('submit', (event: Event) => {
-  event.preventDefault();
-  const $formElements = $contactForm.elements as FormElements;
-  const formData = {
-    name: $formElements.name.value,
-    email: $formElements.email.value,
-    message: $formElements.message.value,
-  };
-  console.log(formData);
-  $contactForm.reset();
-});
