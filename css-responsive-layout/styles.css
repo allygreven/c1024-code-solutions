@@ -32,10 +32,6 @@ body {
 
 /* your code 👇 here */
 @media screen and (width >= 576px) {
-  .container {
-    min-width: 576px;
-  }
-
   .row .col-lg-third {
     flex-basis: 50%;
   }
