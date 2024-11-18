@@ -1,3 +1,11 @@
+//  Numbers {
+//   total: number;
+//   odds: number[];
+//   evens: number[];
+//   range: number[];
+//   average: number;
+// }
+
 function getRangeReport(start: number, end: number): number[] {
   const range: number[] = [];
   for (let i = 0; i <= length; i++) {
