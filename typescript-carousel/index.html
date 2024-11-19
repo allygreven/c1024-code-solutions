@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript Carousel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="carousel">
+        <div class="fa-solid fa-chevron-left" id="arrow-left"></div>
+        <div class="carousel-pics">
+          <img src="./images/025.png" class="image" alt="pikachu" />
+          <img src="./images/039.png" class="image hidden" alt="pink fluffy" />
+          <img src="./images/001.png" class="image hidden" alt="flame bro" />
+          <img src="./images/004.png" class="image hidden" alt="dino dude" />
+          <img src="./images/007.png" class="image hidden" alt="squirtle" />
+        </div>
+        <div class="fa-solid fa-chevron-right" id="id-right"></div>
+        <div class="carousel-bubbles">
+          <span class="bubble active" data-index="0"></span>
+          <span class="bubble" data-index="1"></span>
+          <span class="bubble" data-index="2"></span>
+          <span class="bubble" data-index="3"></span>
+          <span class="bubble" data-index="4"></span>
+          <span class="bubble" data-index="5"></span>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
