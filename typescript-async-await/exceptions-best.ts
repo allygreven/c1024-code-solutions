@@ -34,21 +34,10 @@ throwOnce()
   .then(() => throwChained());
 
 try {
-  try {
-    await throwOnce();
-  } catch (error) {
-    console.log(elapsed(), 'throwOnce Error:', error);
-  }
-  try {
-    await throwSeveral();
-  } catch (error) {
-    console.log(elapsed(), 'throwSeveral Error:', error);
-  }
-  try {
-    await throwChained();
-  } finally {
-    console.log(elapsed(), 'throwChained Error:', 'finally');
-  }
+  await throwOnce();
+  await throwSeveral();
+  await throwChained();
 } catch (error) {
-  console.error('outer Error:', error);
+  console.log('There was an error somewhere in your function');
+  console.log(elapsed(), 'thrown Error:', error);
 }
