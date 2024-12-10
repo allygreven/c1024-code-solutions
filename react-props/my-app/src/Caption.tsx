@@ -1,7 +1,7 @@
-type Caption = {
+type CaptionProps = {
   text: string;
 };
 
-export function Caption({ text }: Caption) {
+export function Caption({ text }: CaptionProps) {
   return <h3>{text}</h3>;
 }

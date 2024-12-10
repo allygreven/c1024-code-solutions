@@ -1,9 +1,9 @@
 import './Image.css';
 
-type Image = {
+type ImageProps = {
   src: string;
 };
 
-export function Image({ src }: Image) {
+export function Image({ src }: ImageProps) {
   return <img src={src} alt="space image" />;
 }

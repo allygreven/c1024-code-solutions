@@ -1,7 +1,7 @@
-type Button = {
+type ButtonProps = {
   buttonText: string;
 };
 
-export function Button({ buttonText }: Button) {
+export function Button({ buttonText }: ButtonProps) {
   return <button>{buttonText}</button>;
 }

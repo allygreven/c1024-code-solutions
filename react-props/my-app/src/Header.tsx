@@ -1,7 +1,7 @@
-type Header = {
+type HeaderProps = {
   title: string;
 };
 
-export function Header({ title }: Header) {
+export function Header({ title }: HeaderProps) {
   return <h1>{title}</h1>;
 }
