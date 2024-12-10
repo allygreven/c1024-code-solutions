@@ -8,7 +8,7 @@ export function Description({ text }: Props) {
 
   return (
     <>
-      <p onClick={() => setCount(count + 1)}>{text[count]}</p>
+      <p onClick={() => setCount((count + 1) % text.length)}>{text[count]}</p>
     </>
   );
 }

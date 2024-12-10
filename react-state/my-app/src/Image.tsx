@@ -13,7 +13,7 @@ export function Image({ srcs }: Props) {
       <div className="d-flex justify-content-center">
         <div className="width-50 ">
           <img
-            onClick={() => setCount(count + 1)}
+            onClick={() => setCount((count + 1) % srcs.length)}
             className="image-fill"
             src={srcs[count]}
             alt="space-image"

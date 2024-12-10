@@ -8,7 +8,9 @@ export function Caption({ captions }: Props) {
 
   return (
     <>
-      <h3 onClick={() => setCount(count + 1)}>{captions[count]}</h3>
+      <h3 onClick={() => setCount((count + 1) % captions.length)}>
+        {captions[count]}
+      </h3>
     </>
   );
 }
