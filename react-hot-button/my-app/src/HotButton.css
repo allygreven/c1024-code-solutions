@@ -1,0 +1,29 @@
+.hot-button.cold {
+  color: white;
+  background-color: #351c75;
+}
+
+.hot-button.cool {
+  color: white;
+  background-color: #674ea7;
+}
+
+.hot-button.tepid {
+  color: white;
+  background-color: #e06666;
+}
+
+.hot-button.warm {
+  color: black;
+  background-color: #f6b26b;
+}
+
+.hot-button.hot {
+  color: black;
+  background-color: #fffa05;
+}
+
+.hot-button.nuclear {
+  color: black;
+  background-color: white;
+}
