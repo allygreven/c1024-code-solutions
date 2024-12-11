@@ -1,8 +1,6 @@
 import './App.css';
 import { HotButton } from './HotButton.tsx';
 
-export function App() {
-  return <HotButton />;
+export default function App() {
+  return <HotButton label="Hot Button" />;
 }
-
-export default App;
