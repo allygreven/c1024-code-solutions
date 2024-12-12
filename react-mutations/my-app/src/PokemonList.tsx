@@ -1,3 +1,5 @@
+import './App.tsx';
+
 export type Pokemon = {
   number: string;
   name: string;
