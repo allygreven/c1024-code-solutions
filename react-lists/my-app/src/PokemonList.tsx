@@ -1,22 +1,20 @@
 import './App';
 
-type Props = {
-  pokedex: Pokemon[];
-};
-
 type Pokemon = {
   number: string;
   name: string;
 };
 
+type Props = {
+  pokedex: Pokemon[];
+};
+
 export function PokemonList({ pokedex }: Props) {
   return (
-    <>
-      <ul>
-        {pokedex.map((pokemon) => (
-          <li key={pokemon.number}>{pokemon.name}</li>
-        ))}
-      </ul>
-    </>
+    <ul>
+      {pokedex.map((pokemon) => (
+        <li key={pokemon.number}>{pokemon.name}</li>
+      ))}
+    </ul>
   );
 }
