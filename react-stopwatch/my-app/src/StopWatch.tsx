@@ -24,14 +24,6 @@ export function StopWatch() {
     setElapsedTime(0);
   }
 
-  // function togglePlayPause() {
-  //   if (intervalID === undefined) {
-  //     <FaPlay />;
-  //   } else {
-  //     <FaPause />;
-  //   }
-  // }
-
   return (
     <>
       <div className="stop-watch">
