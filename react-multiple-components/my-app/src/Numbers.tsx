@@ -1,14 +1,17 @@
 type Props = {
   count: number;
-  currentIndex: number;
+  current: number;
+  onClick: (n: number) => void;
 };
 
-export function Numbers({ count, currentIndex }: Props) {
+export function Numbers({ count, current, onClick }: Props) {
   const numButton = [];
   for (let i = 0; i < count; i++) {
     numButton.push(
       <button
-        style={{ backgroundColor: i === currentIndex ? 'lightpink' : 'white' }}>
+        key={i}
+        onClick={() => onClick(i)}
+        style={{ backgroundColor: i === current ? '#ffd9de' : 'white' }}>
         {i}
       </button>
     );

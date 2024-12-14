@@ -14,11 +14,23 @@ export function RotatingBanner({ items }: Props) {
 
   return (
     <>
-      <div className="rotating-banner">
-        <Header item={items[currentIndex]} />
-        <Previous />
-        <Numbers count={items.length} currentIndex={currentIndex} />
-        <Next />
+      <Header item={items[currentIndex]} />
+      <div className="center-prev">
+        <Previous
+          onClick={() =>
+            setCurrentIndex((currentIndex - 1 + items.length) % items.length)
+          }
+        />
+      </div>
+      <Numbers
+        onClick={setCurrentIndex}
+        count={items.length}
+        current={currentIndex}
+      />
+      <div className="center-next">
+        <Next
+          onClick={() => setCurrentIndex((currentIndex + 1) % items.length)}
+        />
       </div>
     </>
   );

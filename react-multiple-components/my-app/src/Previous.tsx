@@ -1,7 +1,11 @@
-export function Previous() {
+type Props = {
+  onClick: () => void;
+};
+
+export function Previous({ onClick }: Props) {
   return (
     <>
-      <button type="button" className="previous">
+      <button onClick={onClick} type="button" className="previous">
         Previous
       </button>
     </>
