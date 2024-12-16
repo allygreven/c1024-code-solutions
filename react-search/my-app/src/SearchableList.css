@@ -1,0 +1,17 @@
+input {
+  width: 350px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: disc;
+  text-align: left;
+}
+
+.search {
+  padding-left: 20px;
+  background: url('/workspaces/c1024-code-solutions/react-search/my-app/src/search-solid.svg')
+    no-repeat 2px;
+  background-size: 15px;
+}
