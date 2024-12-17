@@ -21,7 +21,9 @@ export function StopWatch() {
   }
 
   function handleClickFace() {
-    setElapsedTime(0);
+    if (intervalID === undefined) {
+      setElapsedTime(0);
+    }
   }
 
   return (
