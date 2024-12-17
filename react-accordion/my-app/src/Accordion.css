@@ -1,0 +1,11 @@
+.title {
+  border: solid black 1px;
+  background-color: rgb(252, 233, 236);
+  width: 500px;
+  cursor: pointer;
+}
+
+.content {
+  border: solid black 1px;
+  width: 500px;
+}
