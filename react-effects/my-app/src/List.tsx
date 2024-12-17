@@ -14,14 +14,17 @@ export function List() {
 
   useEffect(() => {
     async function fetchData() {
-      // try {
-      //   const data = await readItems()
-      // }
-      // catch (error) {
-      //   console.error('failed to fetch items' , error)
-      // }
+      try {
+        const data = await readItems();
+        setItems(data);
+        setError(null);
+      } catch (error) {
+        console.error('failed to fetch items', error);
+      } finally {
+        setIsLoading(false);
+      }
     }
-    readItems();
+    fetchData();
   });
 
   if (isLoading) {
