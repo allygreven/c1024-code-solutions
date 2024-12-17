@@ -17,15 +17,16 @@ export function List() {
       try {
         const data = await readItems();
         setItems(data);
-        setError(null);
+        setIsLoading(false);
       } catch (error) {
         console.error('failed to fetch items', error);
+        setError(error);
       } finally {
         setIsLoading(false);
       }
     }
     fetchData();
-  });
+  }, []);
 
   if (isLoading) {
     return <div>Loading...</div>;
