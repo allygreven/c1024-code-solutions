@@ -17,7 +17,6 @@ export function List() {
       try {
         const data = await readItems();
         setItems(data);
-        setIsLoading(false);
       } catch (error) {
         console.error('failed to fetch items', error);
         setError(error);
