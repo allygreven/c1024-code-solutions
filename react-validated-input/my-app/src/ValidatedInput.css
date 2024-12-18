@@ -1,0 +1,16 @@
+input {
+  border: solid 1.5px black rounded;
+  display: flex;
+  width: 12rem;
+  height: 1.5rem;
+}
+
+label {
+  position: relative;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.validation-message {
+  color: red;
+}
