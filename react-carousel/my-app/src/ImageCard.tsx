@@ -5,12 +5,5 @@ type Props = {
 };
 
 export function ImageCard({ image }: Props) {
-  return (
-    <img
-      className="current-image"
-      src={image.src}
-      alt={image.alt}
-      // style={{ width: '400px' }}
-    />
-  );
+  return <img className="current-image" src={image.src} alt={image.alt} />;
 }
