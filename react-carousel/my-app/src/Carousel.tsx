@@ -24,11 +24,13 @@ export function Carousel({ images }: Props) {
       <NextButton
         onClick={() => setCurrentIndex((currentIndex + 1) % images.length)}
       />
-      <Dots
-        onClick={setCurrentIndex}
-        count={images.length}
-        current={currentIndex}
-      />
+      <div>
+        <Dots
+          onClick={setCurrentIndex}
+          count={images.length}
+          current={currentIndex}
+        />
+      </div>
     </>
   );
 }
