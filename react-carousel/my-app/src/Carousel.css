@@ -1,0 +1,53 @@
+/* body {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-pics {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-bubbles {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  display: flex;
+  gap: 10px;
+}
+
+.bubble {
+  border-radius: 50%;
+  background-color: white;
+  border: solid 3px black;
+  height: 15px;
+  width: 15px;
+}
+
+.bubble:hover {
+  cursor: pointer;
+}
+
+.bubble:active {
+  background-color: black;
+} */
+
+/* #arrow-right {
+  width: 2rem;
+  display: flex;
+}
+
+#prev-button {
+  width: 2rem;
+  display: flex;
+  cursor: pointer;
+} */
