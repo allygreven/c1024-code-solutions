@@ -10,7 +10,7 @@ export function ImageCard({ image }: Props) {
       className="current-image"
       src={image.src}
       alt={image.alt}
-      style={{ height: '400px' }}
+      // style={{ width: '400px' }}
     />
   );
 }
