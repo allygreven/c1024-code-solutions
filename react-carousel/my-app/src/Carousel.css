@@ -1,0 +1,36 @@
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+svg {
+  width: 40px;
+  height: 30px;
+}
+
+.bubble {
+  padding-top: 10px;
+}
+
+.bubble:hover {
+  cursor: pointer;
+}
+
+.carousel {
+  height: 450px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.current-image {
+  max-width: 250px;
+}
+
+.image {
+  width: 300px;
+}
