@@ -12,7 +12,7 @@ export function Dots({ count, current, onClick }: Props) {
     if (i === current) {
       dot.push(<GoDotFill key={i} onClick={() => onClick(i)} />);
     } else {
-      dot.push(<GoDot />);
+      dot.push(<GoDot key={i} />);
     }
   }
 
