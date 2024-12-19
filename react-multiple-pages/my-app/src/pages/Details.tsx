@@ -44,7 +44,7 @@ export function Details() {
     <div className="container">
       <div className="flex flex-col">
         <div className="flex-auto p-6">
-          <Link to="/dashboard" className="p-3 text-gray-600 cursor-pointer">
+          <Link to="/" className="p-3 text-gray-600 cursor-pointer">
             Back to Dashboard
           </Link>
           <div className="flex flex-wrap mb-4">
