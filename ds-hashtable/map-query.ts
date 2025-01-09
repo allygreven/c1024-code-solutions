@@ -10,7 +10,10 @@ export function queryIndex(index: DocumentIndex, query: string): Set<Document> {
   for (const word of words) {
     const docs = index.get(word.toLowerCase());
     if (docs) {
+      for (const doc of docs) {
+        value.add(doc);
+      }
     }
   }
-  return docs;
+  return value;
 }
