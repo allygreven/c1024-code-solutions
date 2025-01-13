@@ -14,8 +14,8 @@ const db = new pg.Pool({
 app.get('/api/films', async (req, res, next) => {
   try {
     const sql = `
-    select "title";
-    from "films";
+    select "title"
+    from "films"
     order by "replacementCost" desc;
     `;
     const result = await db.query(sql);
@@ -33,8 +33,8 @@ app.get('/api/films/:filmId', async (req, res, next) => {
       throw new ClientError(400, 'filmId is required');
     }
     const sql = `
-    select *;
-    from "films";
+    select *
+    from "films"
     limit 1;
     `;
     const params = [filmId];
@@ -62,7 +62,7 @@ app.put('/api/films/:filmId', async (req, res, next) => {
     }
 
     const sql = `
-      update "films";
+      update "films"
       set "title" = $1
       where "filmId" = $2
       returning *;
