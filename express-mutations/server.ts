@@ -18,9 +18,7 @@ app.post('/api/actors', async (req, res, next) => {
   try {
     const { firstName, lastName } = req.body;
     if (!firstName || !lastName) {
-      return res
-        .status(400)
-        .json({ error: 'first and last name are required' });
+      throw new ClientError(400, 'first and last name are required');
     }
 
     const sql = `
@@ -43,9 +41,7 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
     const { firstName, lastName } = req.body;
 
     if (!firstName || !lastName) {
-      return res
-        .status(400)
-        .json({ error: 'first and last names are required' });
+      throw new ClientError(400, 'first and last name are required');
     }
     const sql = `
       update "actors"
@@ -56,10 +52,8 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
     const params = [firstName, lastName, actorId];
     const result = await db.query(sql, params);
 
-    if (result.rowCount === undefined) {
-      return res
-        .status(404)
-        .json({ error: `actor with ID ${actorId} does not exist` });
+    if (result.rowCount === 0) {
+      throw new ClientError(404, `actor with ID ${actorId} does not exist`);
     }
     res.status(200).json(result.rows[0]);
   } catch (err) {
@@ -88,7 +82,7 @@ app.delete('/api/actors/:actorId', async (req, res, next) => {
         .status(404)
         .json({ error: `actor with ID ${actorId} does not exist` });
     }
-    res.status(204).send();
+    res.sendStatus(204);
   } catch (err) {
     next(err);
   }
