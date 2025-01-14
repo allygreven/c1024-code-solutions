@@ -53,7 +53,9 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
     const result = await db.query(sql, params);
 
     if (result.rowCount === 0) {
-      throw new ClientError(404, `actor with ID ${actorId} does not exist`);
+      return res
+        .status(404)
+        .json({ error: `actor with ID ${actorId} does not exist` });
     }
     res.status(200).json(result.rows[0]);
   } catch (err) {
