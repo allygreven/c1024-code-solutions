@@ -27,11 +27,11 @@ app.get('/api/grades', async (req, res, next) => {
   }
 });
 
-app.get('/api/grades:gradeId', async (req, res, next) => {
+app.get('/api/grades/:gradeId', async (req, res, next) => {
   try {
     const { gradeId } = req.params;
-    if (gradeId === undefined) {
-      throw new ClientError(400, 'gradeId is required');
+    if (!Number.isInteger(+gradeId)) {
+      throw new ClientError(400, 'gradeId must be an integer');
     }
     const sql = `
     select *
@@ -40,10 +40,10 @@ app.get('/api/grades:gradeId', async (req, res, next) => {
     `;
     const result = await db.query(sql, [gradeId]);
     const film = result.rows[0];
-    res.status(200).json(film);
     if (!film) {
       throw new ClientError(404, `gradeId not found`);
     }
+    res.status(200).json(film);
   } catch (err) {
     next(err);
   }
@@ -55,13 +55,12 @@ app.post('/api/grades', async (req, res, next) => {
     if (!name || !course || !score) {
       throw new ClientError(400, 'name, course, and grade are required');
     }
-    if (score < 0 && score > 100) {
-      throw new ClientError(400, 'invalid grade');
-    }
     if (!Number.isInteger(Number(score))) {
       throw new ClientError(400, 'invalid score');
     }
-
+    if (score < 0 && score > 100) {
+      throw new ClientError(400, 'invalid grade');
+    }
     const sql = `
   insert into "grades" ("name", "course", "score")
   values ($1, $2, $3)
@@ -84,11 +83,11 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
     if (!name || !course || !score) {
       throw new ClientError(400, 'name, course, and grade are required');
     }
-    if (score < 0 && score > 100) {
-      throw new ClientError(400, 'score must be between 0 and 100');
-    }
     if (!Number.isInteger(Number(gradeId))) {
       throw new ClientError(400, 'invalid gradeId');
+    }
+    if (score < 0 && score > 100) {
+      throw new ClientError(400, 'score must be between 0 and 100');
     }
     const sql = `
       update "grades"
@@ -115,7 +114,7 @@ app.delete('/api/grades/:gradeId', async (req, res, next) => {
   try {
     const { gradeId } = req.params;
     if (!gradeId) {
-      return res.status(400).json({ error: 'invalid gradeId' });
+      throw new ClientError(400, 'invalid grade');
     }
     const sql = `
       delete from "grades"
@@ -124,7 +123,7 @@ app.delete('/api/grades/:gradeId', async (req, res, next) => {
     `;
     const result = await db.query(sql, [gradeId]);
     if (result.rowCount === 0) {
-      return res.status(404).json({ error: `grade ID not found` });
+      throw new ClientError(404, 'grade ID not found');
     }
     res.sendStatus(204);
   } catch (err) {
